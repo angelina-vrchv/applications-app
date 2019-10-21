@@ -1,0 +1,27 @@
+
+<div class="row" id="div"> 
+    <div class="column">
+      <input (click)="loadApplications()" type="button" value="Show Applications" *ngIf="!applications" class="btn btn-primary">
+      <input (click)="hideApplications()" type="button" value="X" *ngIf="applications" class="btn btn-warning">
+      <input (click)="displayAddForm()" type="button" value="Add Application" *ngIf="!applications" class="btn btn-primary">
+  
+      <div>
+        <app-application-item *ngFor="let application of applications" [application]="application"
+          (deleteApplication)="deleteApplication($event)" (editApplication)="editApplication($event)" >
+        </app-application-item>
+      </div>
+    </div>
+    <div class="column">
+      <div *ngIf="showEdit">      
+          <input (click)="displayEditForm()" type="button" value="X" class="btn btn-warning"><br>
+        <app-edit-application (editedApplication)="editedApplication($event)" [application]="application"></app-edit-application>
+      </div>
+      <div *ngIf="showAdd">
+        <br />
+        <input (click)="displayAddForm()" type="button" value="X" class="btn btn-warning"><br>
+        <br />
+        <app-add-application (addApplication)="addApplication($event)"></app-add-application>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,120 @@
+<div> 
+     
+  <h3>Add Application</h3>
+
+<form  id="form" (ngSubmit)="onSubmit()">
+
+  Name:
+  <input
+    class="form-control"
+    type="text"
+    name="Name"
+    [(ngModel)]="name"
+    placeholder="First and Last name"
+    required
+  />
+  <br />
+
+  Email:
+  <input
+    class="form-control"
+    type="text"
+    name="Email"
+    [(ngModel)]="email"
+    placeholder="email@example.com"
+    required
+  />
+  <br />
+
+  Age:
+  <input  class="form-control"
+   type="text" name="Age" 
+  [(ngModel)]="age" placeholder="Age"
+  required />
+  <br />
+
+  Phone number:
+  <input  class="form-control"
+    type="text"
+    name="PhoneNumber"
+    [(ngModel)]="phone_number"
+    placeholder="Phone Number"
+    required/>
+  <br />
+
+  <fieldset>
+  <legend>Preffered Method for communication:</legend>
+  <div class="custom-control custom-radio">
+  <label for="radioPhone">Phone Number</label>
+  <input
+    type="radio"
+    name="radioPhone"
+    [(ngModel)]="way_of_communication"
+    [value]="false"
+    id="radioPhone"
+  /></div>
+  <div class="custom-control custom-radio">
+  <label for="radioEmail">Email</label
+  ><input
+    type="radio"
+    name="radioEmail"
+    [(ngModel)]="way_of_communication"
+    [value]="true"
+    id="radioEmail"
+  /></div>
+  </fieldset>
+  <br />
+
+
+  English level:
+  <select class="form-control" id="exampleSelect1" name="English level" [(ngModel)]="english_level" required>
+    <option value="1">Begginer</option>
+    <option value="2">Intermediate</option>
+  </select>
+  <br />
+
+  Available to start:
+  <input class="form-control"
+    type="date"
+    name="Date"
+    [(ngModel)]="available_to_start"
+    id="inpDate"
+    required/>
+  <br />
+
+  Technical Skills and Courses:
+  <input
+    class="form-control"
+    type="text"
+    name="technical_skills"
+    [(ngModel)]="technical_skills"
+    id=""
+    placeholder="Technical Skills"
+    />
+  <br />
+
+  Short Personal Presentation: <br />
+  <textarea
+    class="form-control"
+    type="text"
+    name="personal_presentation"
+    [(ngModel)]="personal_presentation"
+    id="personal_presentation"
+    placeholder="Personal Presentation"
+  ></textarea>
+  <br />
+
+  Study from home: <br />
+  <input
+    type="checkbox"
+    name="study_from_home"
+    [(ngModel)]="study_from_home"
+    id="chbStudy"
+    checked
+  />
+  <br />
+
+  <input type="submit" value="Submit" id="btn" class="btn btn-primary"/>
+  <br /><br /><br />
+</form>
+</div>

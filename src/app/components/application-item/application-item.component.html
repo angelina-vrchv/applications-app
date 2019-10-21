@@ -1,0 +1,22 @@
+
+<div id="dm">
+    <table class="table table-hover">
+      <tbody>
+    <tr class="table-active">Name: {{application.name}}</tr>
+    <tr>Email: {{application.email}}</tr>
+    <tr class="table-active">Age: {{application.age}}</tr>
+    <tr>Phone Number: {{application.phone_number}}</tr>
+    <tr class="table-active">Way of Communication: {{ application.way_of_communication ? application.email : application.phone_number}}</tr>
+    <tr>English level: {{application.english_level===1?'Begginer':'Intermediate'}}</tr>
+    <tr class="table-active">Available to start: {{application.available_to_start}}</tr>
+    <tr>Technical skills: {{application.technical_skills}}</tr>
+    <tr class="table-active">Personal presentation: {{application.personal_presentation}}</tr>
+    <tr>Study from home: {{application.study_from_home ? 'Yes' : 'No'}}</tr>
+    <br>
+    <button (click)="onDelete(application._id)" class="btn btn-danger">Delete application</button>
+    <button (click)="onEdit(application)" class="btn btn-primary">Edit Application</button>
+    </tbody>
+    </table>
+  </div>
+  
+  
