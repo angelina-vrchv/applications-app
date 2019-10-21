@@ -1,27 +1,76 @@
-# ApplicationsApp
+# Applications-app
+A a system for managing students applications on Angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
+## Getting Started
 
-## Development server
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+Before you begin, make sure your have Node.js and an npm package manager installed.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Node.js
 
-## Build
+Angular requires Node.js version 10.9.0 or later.
+You can check your version by running 
+```
+node -v 
+```
+in a terminal/console window.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Go to https://nodejs.org to get Node.js.
 
-## Running unit tests
+### npm package manager
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Angular, the Angular CLI, and Angular apps depend on features and functionality provided by libraries that are available as npm packages. To download and install npm packages, you must have an npm package manager.
 
-## Running end-to-end tests
+To check that you have the npm client installed, run 
+```
+npm -v in a terminal/console window.
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Running the project
 
-## Further help
+#### Step 1: Get a copy of the project
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. On GitHub, navigate to the main page of the repository.
+
+2. Under the repository name, click Clone or download.
+
+3. To clone the repository using HTTPS, under "Clone with HTTPS", click . To clone the repository via SSH, click Use SSH, then click .
+
+
+#### Step 2: Installing the npm
+Install the dependencies in the local node_modules folder.
+
+In global mode (ie, with -g or --global appended to the command), it installs the current package context (ie, the current working directory) as a global package.
+
+By default, npm install will install all modules listed as dependencies in package.json.
+
+To install the npm, open a terminal/console window and enter the following command:
+```
+npm install 
+```
+If you're using Linux and have a permission error, run:
+```
+sudo npm install 
+```
+
+#### Step 3: Run the application
+
+The Angular CLI includes a server, so that you can easily build and serve your app locally.
+
+1. Go to the workspace folder.
+
+2. Launch the server by using the CLI command 
+```
+ng serve --open
+```
+The --open (or just -o) option automatically opens your browser to http://localhost:4200/.
+
+You can open it manually by typing http://localhost:4200/ in your browser.
+
+To change the port, run
+```
+ng serve --port 3000
+```
